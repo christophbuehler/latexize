@@ -1,0 +1,33 @@
+{
+	"name": "latexize",
+	"private": true,
+	"displayName": "LaTeXiZe",
+	"version": "0.0.1",
+	"publisher": "cbuehler",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/christophbuehler/latexize"
+	},
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:latex"
+	],
+	"main": "./out/extension.js",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "tslint -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^10.12.18",
+		"tslint": "^5.16.0",
+		"typescript": "^3.5.1",
+		"@types/vscode": "^1.32.0"
+	}
+}
