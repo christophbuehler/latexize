@@ -36,9 +36,11 @@ class Emojizer {
         const start = range.start;
         const line = document.lineAt(start.line);
         const char = line.text[start.character];
-        const unicode = 'U+' + char.charCodeAt(0)
+        const charCode = char.charCodeAt(0)
             .toString(16)
             .toUpperCase();
+        const withPad = charCode.padStart(4 - charCode.length, '0');
+        const unicode = 'U+' + withPad;
         const tex = latex_table_1.unicodeToTex[unicode];
         if (!tex) {
             return [];
